@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/nav_item_home"
+        android:icon="@drawable/inbox"/>
+
+    <item android:title="Data Karyawan"
+        android:id="@+id/nav_item_karyawan"
+        android:icon="@drawable/sent"/>
+
+    <item android:title="Data Primer"
+        android:id="@+id/nav_item_primier"
+        android:icon="@drawable/draft"/>
+    <item android:title="Data Histori"
+        android:id="@+id/nav_item_histori"
+        android:icon="@drawable/draft"/>
+    <item android:title="Data Rating"
+        android:id="@+id/nav_item_rating"
+        android:icon="@drawable/draft"/>
+
+
+
+    <group android:id="@+id/group_settings_id">
+
+        <item android:title="Settings"
+            android:icon="@drawable/settings"/>
+        <item android:title="Help"
+            android:icon="@drawable/help"/>
+    </group>
+
+
+
+</menu>

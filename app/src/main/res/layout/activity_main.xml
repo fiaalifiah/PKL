@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AC0000"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="TELKOM INDONESIA"/>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/drawerLayout">
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/containerView">
+        </FrameLayout>
+
+        <com.google.android.material.navigation.NavigationView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/shitstuff"
+            app:itemTextColor="#000000"
+            app:menu="@menu/drawermenu"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>
