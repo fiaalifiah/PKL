@@ -1,6 +1,7 @@
 package com.apps.pkl;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -52,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 if (item.getItemId()==R.id.nav_item_home){
                     FragmentTransaction fragmentTransaction1=FM.beginTransaction();
                     fragmentTransaction1.replace(R.id.containerView,new HomeFragment()).commit();
+                }
+                if (item.getItemId()==R.id.nav_item_primier){
+                    startActivity(new Intent(MainActivity.this,Login.class));
                 }
                 return false;
             }

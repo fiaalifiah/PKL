@@ -7,12 +7,12 @@
     android:orientation="vertical"
     tools:context=".Login">
 
-    <ImageView
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logotelkom"
-        android:paddingTop="20dp"/>
+<!--    <ImageView-->
+<!--        android:layout_width="220dp"-->
+<!--        android:layout_height="220dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:srcCompat="@drawable/logotelkom"-->
+<!--        android:paddingTop="20dp"/>-->
 
     <TextView
         android:layout_width="fill_parent"
