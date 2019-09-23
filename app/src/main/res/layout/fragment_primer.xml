@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tablelayoutid"
+        android:layout_marginTop="10dp">
+
+        <TableRow
+            android:id="@+id/rowlay"
+            android:background="@android:color/holo_red_dark"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="No" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Wilayah A" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nama Wilayah B" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Jarak Lokasi Kerusakan" />
+        </TableRow>
+
+        <TableRow
+            android:background="#ECEFF1"
+            android:padding="5dp" >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Magelang" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wonosari" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="75km" />
+        </TableRow>
+        <TableRow
+            android:background="#ECEFF1"
+            android:padding="5dp" >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wates" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sleman" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="30km" />
+        </TableRow>
+        <TableRow
+            android:background="#ECEFF1"
+            android:padding="5dp" >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sleman" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bantul" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="55km" />
+        </TableRow>
+        <TableRow
+            android:background="#ECEFF1"
+            android:padding="5dp" >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bantul" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wates" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="35km" />
+        </TableRow>
+        <TableRow
+            android:background="#ECEFF1"
+            android:padding="5dp" >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bantul" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wonosari" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="35km" />
+        </TableRow>
+        <TableRow
+            android:background="#ECEFF1"
+            android:padding="5dp" >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wonosari" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Magelang" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50km" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
