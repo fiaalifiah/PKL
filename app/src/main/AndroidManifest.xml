@@ -10,18 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-<<<<<<< HEAD
+
         <activity android:name=".DataHistoryFragment"></activity>
-        <activity android:name=".Login" />
+
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-=======
-        <activity android:name=".MainActivity"></activity>
+            android:name=".MainActivity"></activity>
 
         <activity android:name=".Login">
->>>>>>> cb2b6d5c6c87381fb08f507bd0dc7138f3719f94
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
