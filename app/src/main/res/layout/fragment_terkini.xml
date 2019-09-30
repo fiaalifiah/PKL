@@ -24,12 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:background="@color/colorAccent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lokasi"
-                android:textSize="23sp"
-                android:layout_gravity="center"/>
+            <include layout="@layout/layout_lokasi"/>
         </FrameLayout>
         <LinearLayout
             android:baselineAligned="false"
