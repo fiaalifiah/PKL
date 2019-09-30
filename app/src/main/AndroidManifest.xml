@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+
         <activity android:name=".DataHistoryFragment"></activity>
+
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Login">
             <intent-filter>
