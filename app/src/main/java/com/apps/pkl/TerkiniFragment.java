@@ -9,8 +9,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
-
+import java.util.ArrayList;
 import androidx.fragment.app.Fragment;
 
 
@@ -21,7 +22,9 @@ import androidx.fragment.app.Fragment;
 public class TerkiniFragment extends Fragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-//    SlidingUpPanelLayout layout;
+    ArrayList markerPoints= new ArrayList();
+    SupportMapFragment mapFragment;
+
 
     public TerkiniFragment() {
     }
@@ -31,18 +34,26 @@ public class TerkiniFragment extends Fragment implements OnMapReadyCallback {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_terkini, container, false);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
     return rootView;
     }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng jogja = new LatLng(-7.872954, 110.1440916);
-        mMap.addMarker(new MarkerOptions().position(jogja));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(jogja, 12.0f));
-    }
+        LatLng wates = new LatLng(-7.872954, 110.1440916);
+        mMap.addMarker(new MarkerOptions().position(wates).title("Telkom Wates"));
 
+        LatLng central = new LatLng(-7.7866644,110.304687);
+        mMap.addMarker(new MarkerOptions().position(central).title("Telkom Central"));
+
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        builder.include(wates);
+        builder.include(central);
+        LatLngBounds bounds = builder.build();
+        mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 20));
+    }
 }

@@ -1,19 +1,30 @@
 package com.apps.pkl;
 
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import static com.google.android.gms.maps.MapsInitializer.initialize;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     FragmentManager FM;
     FragmentTransaction FT;
+    private final static int REQUEST_CODE_ASK_PERMISSIONS = 99;
+    private static final String[] REQUIRED_SDK_PERMISSIONS = new String[] {
+            Manifest.permission.ACCESS_FINE_LOCATION };
 
 
 
@@ -28,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         navigationView= (NavigationView) findViewById(R.id.shitstuff);
@@ -66,7 +79,5 @@ public class MainActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
-
     }
 }
