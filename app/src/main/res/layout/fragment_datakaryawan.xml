@@ -85,6 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -115,6 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -144,6 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -173,6 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -202,6 +206,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -231,6 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -260,6 +266,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -289,6 +296,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -318,6 +326,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="pindahactivity"
                     android:text="Click"
                     android:textColor="#1438D6"/>
             </TableRow>
@@ -348,6 +357,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -377,6 +387,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -406,6 +417,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -435,6 +447,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -464,6 +477,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -493,6 +507,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -522,6 +537,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
             <TableRow
@@ -551,6 +567,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#1438D6"
+                    android:onClick="pindahactivity"
                     android:text="Click" />
             </TableRow>
     </TableLayout>
