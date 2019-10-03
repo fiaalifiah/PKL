@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String[] REQUIRED_SDK_PERMISSIONS = new String[] {
             Manifest.permission.ACCESS_FINE_LOCATION };
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
