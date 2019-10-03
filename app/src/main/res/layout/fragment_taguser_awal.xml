@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/getLL"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#0000"
+            android:src="@drawable/ic_current"/>
+
+        <TextView
+            android:id="@+id/ltlng"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circleedit"
+            android:layout_weight="3"
+            android:gravity="center"/>
+        <ImageButton
+            android:id="@+id/getFromMap"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#0000"
+            android:src="@drawable/ic_pinmap"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txLoct"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yogyakarta"/>
+    <TextView
+        android:id="@+id/txLot"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yogyakarta"/>
+
+</LinearLayout>

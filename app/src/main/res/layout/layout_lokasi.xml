@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:paddingTop="6dp"
     android:paddingLeft="14dp"
     android:paddingBottom="14dp"
@@ -33,6 +32,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
+            android:textColor="#000"
             android:text="Terjadi aktivitas penebangan pohon"/>
     </LinearLayout>
     <LinearLayout
@@ -50,6 +50,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000"
             android:text="Jl. Tukangan, Tegal Panggung, Kec. Danurejan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224"/>
     </LinearLayout>
 
