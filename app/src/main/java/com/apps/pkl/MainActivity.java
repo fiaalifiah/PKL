@@ -10,10 +10,6 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,19 +20,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import static com.google.android.gms.maps.MapsInitializer.initialize;
-
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     FragmentManager FM;
     FragmentTransaction FT;
-    private final static int REQUEST_CODE_ASK_PERMISSIONS = 99;
-    private static final String[] REQUIRED_SDK_PERMISSIONS = new String[] {
-            Manifest.permission.ACCESS_FINE_LOCATION };
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,19 +59,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 drawerLayout.closeDrawers();
 
-                if (item.getItemId()== R.id.nav_item_karyawan) {
-                    FragmentTransaction fragmentTransaction= FM.beginTransaction();
-                    fragmentTransaction.replace(R.id.containerView, new DataKaryawanFragment()).commit();
-                }
-                if (item.getItemId()==R.id.nav_item_rating){
-                    FragmentTransaction fragmentTransaction1=FM.beginTransaction();
-                    fragmentTransaction1.replace(R.id.containerView,new RatingFragment()).commit();
-                }
                 if (item.getItemId()==R.id.nav_item_home){
                     FragmentTransaction fragmentTransaction1=FM.beginTransaction();
                     fragmentTransaction1.replace(R.id.containerView,new HomeFragment()).commit();
                 }
-                if (item.getItemId()==R.id.nav_item_primier){
+                if (item.getItemId()==R.id.nav_item_histori){
+                    FragmentTransaction fragmentTransaction1=FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView,new DataPrimerFragment()).commit();
+                }
+                if (item.getItemId()==R.id.nav_login){
                     startActivity(new Intent(MainActivity.this,Login.class));
                 }
                 return false;

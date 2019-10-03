@@ -41,20 +41,26 @@
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nama"
+                android:text="Asal Node A"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Alamat" />
+                android:text="Tujuan Node B" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Telp" />
+                android:text="Panjang (KM)" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Ruas" />
 
 
         </TableRow>
@@ -81,20 +87,26 @@
                 android:layout_width="98dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="Plasa Telkom Yogyakarta"
+                android:text="BABARSARI"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Kota Yogyakarta" />
+                android:text="BANGUNTAPAN" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="(0274)542600" />
+                android:text="5,105" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KU JR G 652 24 C" />
 
 
 
@@ -122,20 +134,26 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="Plasa Telkom Mantrijeron"
+                android:text="SLEMAN"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Kota Yogyakarta" />
+                android:text="MUNTILAN" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="-" />
+                android:text="18.97" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48 C" />
 
 
 
@@ -164,19 +182,26 @@
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Telkom Flash"
+                android:text="SLEMAN"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Kota Yogyakarta" />            <TextView
+                android:text="PAKEM" />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="(0274)419885" />
+                android:text="12.68" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KU JR G 652 12 C" />
 
         </TableRow>
 
@@ -286,14 +311,14 @@
                 android:layout_width="49dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Telkom Banguntapan"
+                android:text="KALASAN"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="122dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Bantul - Diy"
+                android:text="BABARSARI"
                 android:textStyle="bold" />
 
             <TextView
@@ -301,7 +326,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="-" />
+                android:text="8,718" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 36C" />
 
         </TableRow>
 
@@ -310,11 +341,11 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tiga"
+        android:id="@+id/lima"
         android:layout_marginTop="5dp">
 
         <TableRow
-            android:id="@+id/row3"
+            android:id="@+id/row5"
             android:background="@color/colorPrimary"
             android:padding="5dp">
             <TextView
@@ -327,20 +358,26 @@
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Warung Telkom"
+                android:text="BABARSARI"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Koata Yogyakarta" />
+                android:text="KALASAN" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="(0274) 371811" />
+                android:text="8,708" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 36C" />
 
         </TableRow>
 
@@ -349,11 +386,11 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/empat"
+        android:id="@+id/enam"
         android:layout_marginTop="5dp">
 
         <TableRow
-            android:id="@+id/row4"
+            android:id="@+id/row6"
             android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
@@ -366,21 +403,26 @@
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Telkom Biru Satu"
+                android:text="PUGERAN"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Kota Yogyakarta" />
-
+                android:text="BANGUNTAPAN" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="-" />
+                android:text="6,308" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
 
         </TableRow>
 
@@ -389,10 +431,1622 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lima"
+        android:id="@+id/tujuh"
         android:layout_marginTop="5dp">
 
+        <TableRow
+            android:id="@+id/row7"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="7."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PUGERAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="SLEMAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="14,349" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 24C" />
+
+        </TableRow>
+
+
     </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delapan"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row8"
+            android:background="#BBB2B2"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="8."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="WATES" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="31,584" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 12C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sembilan"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row9"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="9."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KENTUNGAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="8,008" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 36C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sepuluh"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row10"
+            android:background="#BBB2B2"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="10."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="GODEAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="10,692" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sebelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row11"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="11."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BABARSARI"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="BANGUNTAPAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="5,375" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duabelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row12"
+            android:background="#BBB2B2"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="12."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BANGUNTAPAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="WONOSARI" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="38,189" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigabelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row13"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="13."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BANGUNTAPAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="WONOSARI" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="35,85" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/empatbelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row14"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="13."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PUGERAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="SLEMAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="14,149" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 36C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/limabelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row15"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="15."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KLATEN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="29,245" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 12C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enambelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row16"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="16."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BABARSARI"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KOTABARU" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="5,175" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tujuhbelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row17"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="17."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KLATEN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="29,245" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 12C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delapanbelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row18"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="18."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="TRIKORA" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="2,762" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sembilanbelas"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row19"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="19."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KENTUNGAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="6,198" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluh"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row20"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="20."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="SLEMAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="12,3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/duapuluhsatu"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row21"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="21."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="KOTABARU"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="PUGERAN" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="5,741" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT JR G 655 48C" />
+
+</TableRow>
+
+
+</TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhdua"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+         android:id="@+id/row22"
+         android:background="@color/colorPrimary"
+         android:padding="5dp">
+         <TextView
+         android:layout_width="40dp"
+         android:layout_height="wrap_content"
+         android:text="22."
+         android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="KOTABARU"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="GODEAN" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="10,598" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT JR G 652 12C" />
+
+</TableRow>
+
+
+</TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhtiga"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row23"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="23."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TRIKORA"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="PUGERAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="3,129" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhempat"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row24"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="24."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PUGERAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="BANTUL" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="11,26" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhlima"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row25"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="25."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="PUGERAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="5,741" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 12C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhenam"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row26"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="26."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BABARSARI"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KALASAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="8,708" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 36C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhtujuh"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row27"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="27."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BABARSARI"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KOTABARU" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="5,598" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 654 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhdelapan"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row28"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="28."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KOTABARU"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="BABARSARI" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="5,608" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/duapuluhsembilan"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row29"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="29."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BANGUNTAPAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="BANTUL" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="17,32" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluh"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row30"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="30."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PUGERAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="BANTUL" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="12,5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluhsatu"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row31"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="31."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KALASAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KLATEN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="15,568" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 36C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluhdua"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row32"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="32."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KALASAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KLATEN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="15,538" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 36C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluhtiga"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row33"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="33."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KENTUNGAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="SLEMAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="8,817" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 24C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluhempat"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row34"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="34."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SLEMAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="MUNTILAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="18" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 655 48C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluhlimma"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row35"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="35."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SLEMAN"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="MUNTILAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="18,8" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT JR G 652 36C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tigapuluhenam"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row36"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="36."
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PAKEM"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KENTUNGAN" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="8,912" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="KT Jalan Raya G652 12C" />
+
+        </TableRow>
+
+
+    </TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/tigapuluhtujuh"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row37"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="37."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="KENTUNGAN"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="SLEMAN" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="8,36" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT Jalan Raya 24C G655" />
+
+</TableRow>
+
+
+</TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/tigapuluhdelapan"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row38"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="38."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="KENTUNGAN"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="SLEMAN" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="8,817" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT Jalan Raya G655 48C" />
+
+</TableRow>
+
+
+</TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/tigapuluhsembilan"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row39"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="39."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="BABARSARI"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="BANGUNTAPAN" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="5,011" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT Jalan Raya 24C, G655" />
+
+</TableRow>
+
+
+</TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/empatpuluh"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row40"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="40."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="PUGERAN"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="WATES" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="31,064" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT Jalan Raya G655, 48C" />
+
+</TableRow>
+
+
+</TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/empatpuluhsatu"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row41"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="41."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="GODEAN"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="WATES" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="26,651" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT Jalan Raya 48C, G655" />
+
+</TableRow>
+    </TableLayout>
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/empatpuluhdua"
+android:layout_marginTop="5dp">
+
+<TableRow
+    android:id="@+id/row42"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="42."
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="KOTABARU"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="SOLO KLATEN" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="29,894" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="KT Jalan Raya 48C, G655" />
+
+</TableRow>
+
+
+</TableLayout>
+
 
 
 
