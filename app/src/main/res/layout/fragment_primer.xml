@@ -1,10 +1,17 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -28,9 +35,54 @@
         android:layout_marginTop="5dp">
 
         <TableRow
+            android:id="@+id/d2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="1."
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="BABARSARI"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BANGUNTAPAN"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5,105"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="KU JR G 652 24 C"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
             android:id="@+id/row1"
             android:background="#99E6EB"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -43,18 +95,21 @@
                 android:layout_weight="1"
                 android:text="Asal Node A"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="Tujuan Node B" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="Panjang (KM)" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,45 +128,6 @@
         android:id="@+id/d1"
         android:layout_marginTop="5dp">
 
-        <TableRow
-            android:id="@+id/d2"
-            android:background="@color/colorPrimary"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="98dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:text="BABARSARI"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="BANGUNTAPAN" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="5,105" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="KU JR G 652 24 C" />
-
-
-
-        </TableRow>
-
 
     </TableLayout>
     <TableLayout
@@ -124,6 +140,7 @@
             android:id="@+id/d4"
             android:background="#BBB2B2"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -136,18 +153,21 @@
                 android:layout_weight="1"
                 android:text="SLEMAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="MUNTILAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="18.97" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -172,6 +192,7 @@
             android:id="@+id/d9"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -184,18 +205,21 @@
                 android:layout_weight="1"
                 android:text="SLEMAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="PAKEM" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="12.68" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,52 +231,12 @@
 
     </TableLayout>
     <TableRow
-        android:id="@+id/d11"
-        android:background="@color/colorPrimary"
-        android:padding="5dp">
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:text="No"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="98dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Alamat" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 2" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Detail Jarak" />
-
-    </TableRow>
-
-    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/d6"
         android:background="@color/colorPrimary"
         android:padding="5dp">
+
         <TextView
             android:layout_width="40dp"
             android:layout_height="wrap_content"
@@ -265,24 +249,28 @@
             android:layout_weight="1"
             android:text="Nama"
             android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
             android:text="Alamat" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
             android:text="Lokasi 1" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
             android:text="Lokasi 2" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -301,6 +289,7 @@
             android:id="@+id/row2"
             android:background="#BBB2B2"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -327,6 +316,7 @@
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="8,718" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -348,6 +338,7 @@
             android:id="@+id/row5"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -360,18 +351,21 @@
                 android:layout_weight="1"
                 android:text="BABARSARI"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="KALASAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="8,708" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -393,6 +387,7 @@
             android:id="@+id/row6"
             android:background="#BBB2B2"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -405,18 +400,21 @@
                 android:layout_weight="1"
                 android:text="PUGERAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="BANGUNTAPAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="6,308" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -438,6 +436,7 @@
             android:id="@+id/row7"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -450,18 +449,21 @@
                 android:layout_weight="1"
                 android:text="PUGERAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="SLEMAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="14,349" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -483,6 +485,7 @@
             android:id="@+id/row8"
             android:background="#BBB2B2"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -495,18 +498,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="WATES" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="31,584" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -528,6 +534,7 @@
             android:id="@+id/row9"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -540,18 +547,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="KENTUNGAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="8,008" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -573,6 +583,7 @@
             android:id="@+id/row10"
             android:background="#BBB2B2"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -585,18 +596,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="GODEAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="10,692" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -618,6 +632,7 @@
             android:id="@+id/row11"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -630,18 +645,21 @@
                 android:layout_weight="1"
                 android:text="BABARSARI"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="BANGUNTAPAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="5,375" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -663,6 +681,7 @@
             android:id="@+id/row12"
             android:background="#BBB2B2"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -675,18 +694,21 @@
                 android:layout_weight="1"
                 android:text="BANGUNTAPAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="WONOSARI" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="38,189" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -708,6 +730,7 @@
             android:id="@+id/row13"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -720,18 +743,21 @@
                 android:layout_weight="1"
                 android:text="BANGUNTAPAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="WONOSARI" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="35,85" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -753,6 +779,7 @@
             android:id="@+id/row14"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -765,18 +792,21 @@
                 android:layout_weight="1"
                 android:text="PUGERAN"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="SLEMAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="14,149" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -798,6 +828,7 @@
             android:id="@+id/row15"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -810,18 +841,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="KLATEN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="29,245" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -843,6 +877,7 @@
             android:id="@+id/row16"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -855,18 +890,21 @@
                 android:layout_weight="1"
                 android:text="BABARSARI"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="KOTABARU" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="5,175" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -888,6 +926,7 @@
             android:id="@+id/row17"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -900,18 +939,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="KLATEN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="29,245" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -933,6 +975,7 @@
             android:id="@+id/row18"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -945,18 +988,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="TRIKORA" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="2,762" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -978,6 +1024,7 @@
             android:id="@+id/row19"
             android:background="@color/colorPrimary"
             android:padding="5dp">
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -990,18 +1037,21 @@
                 android:layout_weight="1"
                 android:text="KOTABARU"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="KENTUNGAN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
                 android:text="6,198" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -2041,13 +2091,8 @@ android:layout_marginTop="5dp">
         android:layout_weight="1"
         android:textStyle="bold"
         android:text="KT Jalan Raya 48C, G655" />
-
 </TableRow>
-
-
 </TableLayout>
-
-
-
-
-</LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
