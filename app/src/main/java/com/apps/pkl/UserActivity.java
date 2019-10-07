@@ -54,20 +54,24 @@ public class UserActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 drawerLayout2.closeDrawers();
                 if (item.getItemId()== R.id.nav_item_karyawan2) {
-//                    FragmentTransaction fragmentTransaction= FM.beginTransaction();
-//                    fragmentTransaction.replace(R.id.containerView, new DataKaryawanFragment()).commit();
+                    FragmentTransaction fragmentTransaction= FM2.beginTransaction();
+                    fragmentTransaction.replace(R.id.containerView2, new DataKaryawanFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_item_rating2){
-//                    FragmentTransaction fragmentTransaction1=FM.beginTransaction();
-//                    fragmentTransaction1.replace(R.id.containerView,new RatingFragment()).commit();
+                    FragmentTransaction fragmentTransaction1=FM2.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView2,new RatingFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_item_home2){
-//                    FragmentTransaction fragmentTransaction1=FM.beginTransaction();
-//                    fragmentTransaction1.replace(R.id.containerView,new HomeFragment()).commit();
+                    FragmentTransaction fragmentTransaction1=FM2.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView2,new UserHomeFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_item_primier2){
                     FragmentTransaction fragmentTransaction1=FM2.beginTransaction();
                     fragmentTransaction1.replace(R.id.containerView2,new DataPrimerFragment()).commit();
+                }
+                if (item.getItemId()== R.id.nav_item_histori2) {
+                    FragmentTransaction fragmentTransaction= FM2.beginTransaction();
+                    fragmentTransaction.replace(R.id.containerView2, new DataHistoryFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_logout2){
                     startActivity(new Intent(UserActivity.this,MainActivity.class));
