@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".DataPrimerFragment">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -206,91 +206,6 @@
         </TableRow>
 
     </TableLayout>
-    <TableRow
-        android:id="@+id/d11"
-        android:background="@color/colorPrimary"
-        android:padding="5dp">
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:text="No"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="98dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Alamat" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 2" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Detail Jarak" />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/d6"
-        android:background="@color/colorPrimary"
-        android:padding="5dp">
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:text="No"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="98dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Alamat" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 2" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Detail Jarak" />
-
-    </TableRow>
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

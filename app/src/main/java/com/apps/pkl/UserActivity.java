@@ -66,8 +66,8 @@ public class UserActivity extends AppCompatActivity {
 //                    fragmentTransaction1.replace(R.id.containerView,new HomeFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_item_primier2){
-//                    FragmentTransaction fragmentTransaction1=FM.beginTransaction();
-//                    fragmentTransaction1.replace(R.id.containerView,new DataPrimerFragment()).commit();
+                    FragmentTransaction fragmentTransaction1=FM2.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView2,new DataPrimerFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_logout2){
                     startActivity(new Intent(UserActivity.this,MainActivity.class));
