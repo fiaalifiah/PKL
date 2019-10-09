@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (item.getItemId()==R.id.nav_item_histori){
                     FragmentTransaction fragmentTransaction1=FM.beginTransaction();
-                    fragmentTransaction1.replace(R.id.containerView,new DataPrimerFragment()).commit();
+                    fragmentTransaction1.replace(R.id.containerView,new DataHistoryFragment()).commit();
                 }
                 if (item.getItemId()==R.id.nav_login){
                     startActivity(new Intent(MainActivity.this,Login.class));
