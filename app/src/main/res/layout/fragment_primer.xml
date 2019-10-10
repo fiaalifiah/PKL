@@ -2,7 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DataPrimerFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,6 +35,47 @@
         android:layout_height="wrap_content"
         android:id="@+id/pertama"
         android:layout_marginTop="5dp">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:background="#99E6EB"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Asal Node A"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Tujuan Node B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Panjang (KM)" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Ruas" />
+
+        </TableRow>
 
         <TableRow
             android:id="@+id/d2"
@@ -78,47 +121,7 @@
 
         </TableRow>
 
-        <TableRow
-            android:id="@+id/row1"
-            android:background="#99E6EB"
-            android:padding="5dp">
 
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:text="No"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="98dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Asal Node A"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="Tujuan Node B" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="Panjang (KM)" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="Ruas" />
-
-
-        </TableRow>
 
     </TableLayout>
 
@@ -232,10 +235,7 @@
     </TableLayout>
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/d6"
-        android:background="@color/colorPrimary"
-        android:padding="5dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="40dp"
@@ -777,13 +777,13 @@
 
         <TableRow
             android:id="@+id/row14"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
 
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:text="13."
+                android:text="14."
                 android:textStyle="bold"/>
 
             <TextView
@@ -875,7 +875,7 @@
 
         <TableRow
             android:id="@+id/row16"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
 
             <TextView
@@ -973,7 +973,7 @@
 
         <TableRow
             android:id="@+id/row18"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
 
             <TextView
@@ -1071,7 +1071,7 @@
 
         <TableRow
             android:id="@+id/row20"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1161,7 +1161,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
          android:id="@+id/row22"
-         android:background="@color/colorPrimary"
+         android:background="#BBB2B2"
          android:padding="5dp">
          <TextView
          android:layout_width="40dp"
@@ -1251,7 +1251,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row24"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1341,7 +1341,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row26"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1431,7 +1431,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row28"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1521,7 +1521,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row30"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1611,7 +1611,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row32"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1701,7 +1701,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row34"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1791,7 +1791,7 @@ android:layout_marginTop="5dp">
 
         <TableRow
             android:id="@+id/row36"
-            android:background="@color/colorPrimary"
+            android:background="#BBB2B2"
             android:padding="5dp">
             <TextView
                 android:layout_width="40dp"
@@ -1881,7 +1881,7 @@ android:layout_marginTop="5dp">
 
 <TableRow
     android:id="@+id/row38"
-    android:background="@color/colorPrimary"
+    android:background="#BBB2B2"
     android:padding="5dp">
     <TextView
         android:layout_width="40dp"
@@ -1971,7 +1971,7 @@ android:layout_marginTop="5dp">
 
 <TableRow
     android:id="@+id/row40"
-    android:background="@color/colorPrimary"
+    android:background="#BBB2B2"
     android:padding="5dp">
     <TextView
         android:layout_width="40dp"
@@ -2059,7 +2059,7 @@ android:layout_marginTop="5dp">
 
 <TableRow
     android:id="@+id/row42"
-    android:background="@color/colorPrimary"
+    android:background="#BBB2B2"
     android:padding="5dp">
     <TextView
         android:layout_width="40dp"

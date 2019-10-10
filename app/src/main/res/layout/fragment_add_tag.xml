@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="bottom"
-    sothree:umanoPanelHeight="180dp"
+    sothree:umanoPanelHeight="155dp"
     sothree:umanoShadowHeight="40dp">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
             android:id="@+id/mapuser"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="350dp"/>
+            android:layout_height="355dp"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +21,8 @@
         android:orientation="vertical">
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@color/colorAccent">
+            android:layout_height="155dp"
+            android:background="#ffff">
             <include layout="@layout/fragment_taguser_awal"/>
         </FrameLayout>
         <LinearLayout
@@ -31,9 +31,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <FrameLayout
+                android:id="@+id/containerAdd"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@color/colorAccent">
+                android:layout_height="300dp"
+                android:background="#ffff">
                 <include layout="@layout/fragment_taguser"/>
             </FrameLayout>
         </LinearLayout>
