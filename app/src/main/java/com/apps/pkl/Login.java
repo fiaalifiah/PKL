@@ -69,7 +69,7 @@ public class Login extends AppCompatActivity {
                         if (jsonRESULTS.getString("error").equals("false")){
                             Toast.makeText(mContext, "BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
                             String nama = jsonRESULTS.getJSONObject("user").getString("nama");
-                            Intent intent = new Intent(mContext, UserActivity.class);
+                            Intent intent = new Intent(mContext, RatingDashboard.class);
                             intent.putExtra("result_nama", nama);
                             startActivity(intent);
                         } else {
