@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
         btnLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this,UserActivity.class));
+                startActivity(new Intent(Login.this,RatingDashboard.class));
             }
         });
     }
