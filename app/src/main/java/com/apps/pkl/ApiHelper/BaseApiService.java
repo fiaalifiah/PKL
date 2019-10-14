@@ -12,4 +12,11 @@ public interface BaseApiService {
     Call<ResponseBody> loginRequest(@Field("username") String username,
                                            @Field("password") String password);
 
+    @FormUrlEncoded
+    @POST("addtag.php")
+    Call<ResponseBody> addTag(@Field("lat") String lat,
+                          @Field("lng") String lng,
+                          @Field("kabel") String kabel,
+                          @Field("core") String core,
+                          @Field("des") String des);
 }

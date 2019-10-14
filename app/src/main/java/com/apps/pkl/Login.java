@@ -10,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,11 +26,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public class Login extends AppCompatActivity {
-    Button btnLog;
-    EditText etEmail;
+    EditText etUsername;
     EditText etPassword;
     Button btnLogin;
-    Button btnRegister;
     ProgressDialog loading;
 
     Context mContext;
@@ -47,19 +46,23 @@ public class Login extends AppCompatActivity {
     }
 
     private void initComponents() {
-        etEmail = (EditText) findViewById(R.id.txtemail);
+        etUsername = (EditText) findViewById(R.id.txtUsername);
         etPassword = (EditText) findViewById(R.id.txtpassword);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
-                requestLogin();
+                if(TextUtils.isEmpty(etUsername.getText())&& TextUtils.isEmpty(etPassword.getText())){
+                    Toast.makeText(mContext,"Masukan Username dan Password anda",Toast.LENGTH_LONG).show();
+                }else{
+                    loading = ProgressDialog.show(mContext, null, "Harap Tunggu...", true, false);
+                    requestLogin();
+                }
             }
         });
     }
     public void requestLogin(){
-        mApiService.loginRequest(etEmail.getText().toString(), etPassword.getText().toString()).enqueue(new Callback<ResponseBody>() {
+        mApiService.loginRequest(etUsername.getText().toString(), etPassword.getText().toString()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()){
@@ -92,6 +95,5 @@ public class Login extends AppCompatActivity {
                 loading.dismiss();
             }
         });
-
     }
 }

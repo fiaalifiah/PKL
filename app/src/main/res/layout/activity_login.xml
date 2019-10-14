@@ -49,7 +49,7 @@
             android:visibility="invisible" />
 
         <EditText
-            android:id="@+id/txtemail"
+            android:id="@+id/txtUsername"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:padding="15dp"
