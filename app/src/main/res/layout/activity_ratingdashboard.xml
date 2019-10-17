@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rating Teratas"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -57,6 +57,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -90,7 +91,7 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_weight="3"
-                        android:src="@drawable/fia" />
+                        android:src="@mipmap/ic_person" />
 
                     <TextView
 
@@ -125,7 +126,7 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_weight="3"
-                        android:src="@drawable/nns" />
+                        android:src="@mipmap/ic_person" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -163,7 +164,7 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_weight="3"
-                        android:src="@drawable/dhany" />
+                        android:src="@mipmap/ic_person" />
 
                     <TextView
                         android:layout_width="wrap_content"
