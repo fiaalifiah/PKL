@@ -2,6 +2,7 @@ package com.apps.pkl;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,17 +14,22 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apps.pkl.ApiHelper.BaseApiAdd;
+import com.apps.pkl.ApiHelper.BaseApiService;
+import com.apps.pkl.ApiHelper.UtilsApi;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -34,6 +40,9 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -41,12 +50,16 @@ import java.util.Locale;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static androidx.core.content.ContextCompat.checkSelfPermission;
 
 public class AddTagFragment extends Fragment implements OnMapReadyCallback, LocationListener {
     private GoogleMap mMap2;
+    EditText desInfo;
     SupportMapFragment mFragment;
     TextView txL, texLL;
     ImageView priv;
@@ -56,9 +69,14 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
     List<Address> addresses = null;
     LocationManager localmanager;
     Marker selected;
+    Double getLt,getLn;
+    BaseApiAdd mApiAdd;
+    Spinner kabel , core;
 
     private static final int CAMERA_REQUEST = 21 ;
     private static final int MY_CAMERA_PERMISSION_CODE = 22;
+    public static final String URL = "https://telkom-pkl.000webhostapp.com/api/";
+    private ProgressDialog progress;
 
 
     public AddTagFragment() {
@@ -79,13 +97,14 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         texLL = root.findViewById(R.id.ltlng);
         currentLoct= root.findViewById(R.id.getLL);
         priv=root.findViewById(R.id.imgPriv);
+        desInfo=root.findViewById(R.id.desInfo);
 
-        Spinner kabel = root.findViewById(R.id.spinnerKabel);
+         kabel = root.findViewById(R.id.spinnerKabel);
         String[] itemsKabel = new String[]{"1", "2", "3"};
         ArrayAdapter<String> adapterKabel = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, itemsKabel);
         kabel.setAdapter(adapterKabel);
 
-        Spinner core = root.findViewById(R.id.spinnerCore);
+        core = root.findViewById(R.id.spinnerCore);
         String[] itemCore = new String[]{"1", "2", "3"};
         ArrayAdapter<String> adapterCore = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, itemCore);
         core.setAdapter(adapterCore);
@@ -136,7 +155,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                 .setCancelable(false)
                 .setPositiveButton("Iya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
-                        startActivity(new Intent(getActivity(), ActivityTime.class ));
+                        addTag();
                     }
                 })
                 .setNegativeButton("Tidak",new DialogInterface.OnClickListener() {
@@ -146,6 +165,60 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                 });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+    public void addTag(){
+        mApiAdd = UtilsApi.getAPIAdd();
+
+        //membuat progress dialog
+        progress = new ProgressDialog(getContext());
+        progress.setCancelable(false);
+        progress.setMessage("Loading ...");
+        progress.show();
+
+        //mengambil data
+//        String kabe = kabel.getSelectedItem().toString();
+//        String cor = core.getSelectedItem().toString();
+//        String des= desInfo.getText().toString();
+//        String latt= getLt.toString();
+//        String lng= getLn.toString();
+
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl(URL)
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//        BaseApiService api = retrofit.create(BaseApiService.class);
+//        Call<ResponseBody> call = api.addTag(latt,lng,kabe,cor,des);
+        mApiAdd.addTag(-7.813989, 8110.360533, "ABC", "7hv","Pedot brooo").enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()) {
+                    progress.dismiss();
+                    try {
+                        JSONObject jsonRESULTS = new JSONObject(response.body().string());
+                        if (jsonRESULTS.getString("error").equals("false")) {
+                            Toast.makeText(getContext(), "Terkirim", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getActivity(), ActivityTime.class));
+                        } else {
+                            Toast.makeText(getContext(), "Gagal Kirim", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Toast.makeText(getContext(), "Gagal", Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }else {
+                    progress.dismiss();
+                    Toast.makeText(getContext(), "Respon Gagal", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e("debug", "onFailure: ERROR > " + t.toString());
+                progress.dismiss();
+            }
+        });
     }
 
     @Override
@@ -179,6 +252,8 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                 }
                 selected = mMap2.addMarker(new MarkerOptions().position(point).title("Marker terpilih"));
                 texLL.setText("Lat. : "+point.latitude+"\nLng. : "+point.longitude);
+                getLt=point.latitude;
+                getLn=point.longitude;
                 try{
                     addresses=geocode.getFromLocation(point.latitude,point.longitude,1);
                     String address = addresses.get(0).getAddressLine(0);

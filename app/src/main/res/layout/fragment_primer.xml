@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,9 +6,6 @@
     android:orientation="vertical"
     tools:context=".DataPrimerFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dua"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="0dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,11 +27,16 @@
         android:textSize="30dp"
         android:textStyle="bold" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/pertama"
-        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pertama"
+            android:layout_marginTop="5dp" />
 
         <TableRow
             android:id="@+id/row1"
@@ -42,15 +44,21 @@
             android:padding="5dp">
 
             <TextView
-                android:layout_width="40dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="No"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="98dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:layout_marginRight="90dp"
                 android:text="Asal Node A"
                 android:textStyle="bold" />
 
@@ -76,6 +84,8 @@
                 android:text="Ruas" />
 
         </TableRow>
+
+    </LinearLayout>
 
         <TableRow
             android:id="@+id/d2"
@@ -108,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="5,105"
+                android:text="5.105"
                 android:textStyle="bold" />
 
             <TextView
@@ -118,12 +128,7 @@
                 android:text="KU JR G 652 24 C"
                 android:textStyle="bold" />
 
-
         </TableRow>
-
-
-
-    </TableLayout>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -233,52 +238,6 @@
         </TableRow>
 
     </TableLayout>
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:text="No"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="98dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Alamat" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Lokasi 2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Detail Jarak" />
-
-    </TableRow>
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -315,7 +274,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="8,718" />
+                android:text="8.718" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -364,7 +323,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="8,708" />
+                android:text="8.708" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -413,7 +372,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="6,308" />
+                android:text="6.308" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -462,7 +421,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="14,349" />
+                android:text="14.349" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -511,7 +470,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="31,584" />
+                android:text="31.584" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -560,7 +519,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="8,008" />
+                android:text="8.008" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -609,7 +568,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="10,692" />
+                android:text="10.692" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -658,7 +617,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="5,375" />
+                android:text="5.375" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -707,7 +666,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="38,189" />
+                android:text="38.189" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -756,7 +715,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="35,85" />
+                android:text="35.85" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -805,7 +764,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="14,149" />
+                android:text="14.149" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -854,7 +813,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="29,245" />
+                android:text="29.245" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -903,7 +862,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="5,175" />
+                android:text="5.175" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -952,7 +911,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="29,245" />
+                android:text="29.245" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1001,7 +960,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="2,762" />
+                android:text="2.762" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1050,7 +1009,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="6,198" />
+                android:text="6.198" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1096,7 +1055,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="12,3" />
+                android:text="12.3" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1150,8 +1109,6 @@ android:layout_marginTop="5dp">
         android:text="KT JR G 655 48C" />
 
 </TableRow>
-
-
 </TableLayout>
     <TableLayout
         android:layout_width="match_parent"
@@ -1186,7 +1143,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="10,598" />
+        android:text="10.598" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1231,7 +1188,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="3,129" />
+                android:text="3.129" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1276,7 +1233,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="11,26" />
+                android:text="11.26" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1321,7 +1278,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="5,741" />
+                android:text="5.741" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1366,7 +1323,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="8,708" />
+                android:text="8.708" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1411,7 +1368,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="5,598" />
+                android:text="5.598" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1456,7 +1413,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="5,608" />
+                android:text="5.608" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1501,7 +1458,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="17,32" />
+                android:text="17.32" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1546,7 +1503,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="12,5" />
+                android:text="12.5" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1591,7 +1548,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="15,568" />
+                android:text="15.568" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1636,7 +1593,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="15,538" />
+                android:text="15.538" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1681,7 +1638,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="8,817" />
+                android:text="8.817" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1771,7 +1728,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="18,8" />
+                android:text="18.8" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1816,7 +1773,7 @@ android:layout_marginTop="5dp">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="8,912" />
+                android:text="8.912" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1861,7 +1818,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="8,36" />
+        android:text="8.36" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1906,7 +1863,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="8,817" />
+        android:text="8.817" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1951,7 +1908,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="5,011" />
+        android:text="5.011" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1996,7 +1953,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="31,064" />
+        android:text="31.064" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -2041,7 +1998,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="26,651" />
+        android:text="26.651" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -2084,7 +2041,7 @@ android:layout_marginTop="5dp">
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
-        android:text="29,894" />
+        android:text="29.894" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -2093,6 +2050,6 @@ android:layout_marginTop="5dp">
         android:text="KT Jalan Raya 48C, G655" />
 </TableRow>
 </TableLayout>
+    </TableLayout>
     </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+</ScrollView>
