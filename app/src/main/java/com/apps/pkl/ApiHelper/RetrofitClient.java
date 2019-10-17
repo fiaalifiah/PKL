@@ -9,6 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     private static Retrofit retrofit = null;
     private static Retrofit retrofitAdd = null;
+    private static Retrofit retrofitImg = null;
 
     public static Retrofit getClient(String baseUrl){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -38,4 +39,5 @@ public class RetrofitClient {
         }
         return retrofitAdd;
     }
+
 }
