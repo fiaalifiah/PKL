@@ -76,7 +76,7 @@
                         android:text="Belum Masuk" />
                 </TableRow>
                 <TableRow
-                    android:background="#ECEFF1"
+                    android:background="#ECEFF1    "
                     android:padding="5dp">
                     <TextView
                         android:layout_width="40dp"

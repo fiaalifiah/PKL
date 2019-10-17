@@ -8,15 +8,15 @@
     android:orientation="vertical"
     tools:context=".Login">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/ic_logo" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/ic_logo" />
 
     <TextView
         android:layout_width="fill_parent"
