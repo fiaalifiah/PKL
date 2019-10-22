@@ -13,7 +13,10 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,13 +46,32 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -63,19 +85,23 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
     SupportMapFragment mFragment;
     TextView txL, texLL;
     ImageView priv;
+    Bitmap photo;
     Button submitbtn;
     ImageButton currentLoct, captImg;
     Geocoder geocode;
     List<Address> addresses = null;
     LocationManager localmanager;
     Marker selected;
-    Double getLt,getLn;
+    public static Double getLt, getLn;
     BaseApiAdd mApiAdd;
-    Spinner kabel , core;
+    boolean check = true;
+    Spinner kabel, core;
 
-    private static final int CAMERA_REQUEST = 21 ;
+    String ImageName = "image_name" ;
+    String ImagePath = "image_path" ;
+    String ImageUpload ="https://telkom-pkl.000webhostapp.com/api/uploadImg.php" ;
+    private static final int CAMERA_REQUEST = 21;
     private static final int MY_CAMERA_PERMISSION_CODE = 22;
-    public static final String URL = "https://telkom-pkl.000webhostapp.com/api/";
     private ProgressDialog progress;
 
 
@@ -95,11 +121,11 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
         txL = root.findViewById(R.id.txLoct);
         texLL = root.findViewById(R.id.ltlng);
-        currentLoct= root.findViewById(R.id.getLL);
-        priv=root.findViewById(R.id.imgPriv);
-        desInfo=root.findViewById(R.id.desInfo);
+        currentLoct = root.findViewById(R.id.getLL);
+        priv = root.findViewById(R.id.imgPriv);
+        desInfo = root.findViewById(R.id.desInfo);
 
-         kabel = root.findViewById(R.id.spinnerKabel);
+        kabel = root.findViewById(R.id.spinnerKabel);
         String[] itemsKabel = new String[]{"1", "2", "3"};
         ArrayAdapter<String> adapterKabel = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_dropdown_item, itemsKabel);
         kabel.setAdapter(adapterKabel);
@@ -113,9 +139,9 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
             @Override
             public void onClick(View v) {
                 localmanager = (LocationManager) getActivity().getSystemService(getContext().LOCATION_SERVICE);
-                if (checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION)
+                if (checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED && checkSelfPermission(getContext()
-                        ,Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        , Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
                 Location loc = localmanager.getLastKnownLocation(localmanager.NETWORK_PROVIDER);
@@ -125,13 +151,13 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
         geocode = new Geocoder(getContext(), Locale.getDefault());
 
-        captImg=root.findViewById(R.id.captCam);
+        captImg = root.findViewById(R.id.captCam);
         captImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkSelfPermission(getContext(),Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+                if (checkSelfPermission(getContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
-                }else{
+                } else {
                     Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                     startActivityForResult(cameraIntent, CAMERA_REQUEST);
                 }
@@ -147,18 +173,24 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         return root;
     }
 
-    public void alertConfirm(){
+    public void alertConfirm() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setTitle("Peringatan!");
         alertDialogBuilder
                 .setMessage("Data tidak bisa diubah lagi, Yakin melanjutkan?")
                 .setCancelable(false)
+
                 .setPositiveButton("Iya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
                         startActivity(new Intent(getActivity(), ActivityTime.class));
+
+                .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        addTag();
+
                     }
                 })
-                .setNegativeButton("Tidak",new DialogInterface.OnClickListener() {
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                     }
@@ -166,9 +198,11 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-    public void addTag(){
+
+    public void addTag() {
         mApiAdd = UtilsApi.getAPIAdd();
 
+//        ImageUpload();
         //membuat progress dialog
         progress = new ProgressDialog(getContext());
         progress.setCancelable(false);
@@ -176,19 +210,11 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         progress.show();
 
         //mengambil data
-//        String kabe = kabel.getSelectedItem().toString();
-//        String cor = core.getSelectedItem().toString();
-//        String des= desInfo.getText().toString();
-//        String latt= getLt.toString();
-//        String lng= getLn.toString();
+        String kabe = kabel.getSelectedItem().toString();
+        String cor = core.getSelectedItem().toString();
+        String des = desInfo.getText().toString();
 
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(URL)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//        BaseApiService api = retrofit.create(BaseApiService.class);
-//        Call<ResponseBody> call = api.addTag(latt,lng,kabe,cor,des);
-        mApiAdd.addTag(-7.813989, 8110.360533, "ABC", "7hv","Pedot brooo").enqueue(new Callback<ResponseBody>() {
+        mApiAdd.addTag( getLt, getLn, kabe, cor, des).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
@@ -207,7 +233,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                }else {
+                } else {
                     progress.dismiss();
                     Toast.makeText(getContext(), "Respon Gagal", Toast.LENGTH_SHORT).show();
                 }
@@ -228,37 +254,37 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
         int height = 50;
         int width = 50;
-        BitmapDrawable bitmapdraw=(BitmapDrawable)getResources().getDrawable(R.drawable.ic_tower);
-        Bitmap b=bitmapdraw.getBitmap();
+        BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.ic_tower);
+        Bitmap b = bitmapdraw.getBitmap();
         Bitmap icon = Bitmap.createScaledBitmap(b, width, height, false);
 
         LatLng pugeran = new LatLng(-7.813989, 110.360533);
         mMap2.addMarker(new MarkerOptions().position(pugeran).title("Telkom Pugeran").icon(BitmapDescriptorFactory.fromBitmap(icon)));
 
-        LatLng central = new LatLng(-7.7867067,110.3725283);
+        LatLng central = new LatLng(-7.7867067, 110.3725283);
         mMap2.addMarker(new MarkerOptions().position(central).title("Telkom Central").icon(BitmapDescriptorFactory.fromBitmap(icon)));
 
         LatLngBounds.Builder builder2 = new LatLngBounds.Builder();
         builder2.include(pugeran);
         builder2.include(central);
         LatLngBounds bounds = builder2.build();
-        mMap2.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,20));
+        mMap2.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 20));
 
         mMap2.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng point) {
-                if (selected!=null){
+                if (selected != null) {
                     selected.remove();
                 }
                 selected = mMap2.addMarker(new MarkerOptions().position(point).title("Marker terpilih"));
-                texLL.setText("Lat. : "+point.latitude+"\nLng. : "+point.longitude);
-                getLt=point.latitude;
-                getLn=point.longitude;
-                try{
-                    addresses=geocode.getFromLocation(point.latitude,point.longitude,1);
+                texLL.setText("Lat. : " + point.latitude + "\nLng. : " + point.longitude);
+                getLt = point.latitude;
+                getLn = point.longitude;
+                try {
+                    addresses = geocode.getFromLocation(point.latitude, point.longitude, 1);
                     String address = addresses.get(0).getAddressLine(0);
-                    txL.setText(""+address);
-                }catch (IOException e) {
+                    txL.setText("" + address);
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
@@ -267,18 +293,18 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
     @Override
     public void onLocationChanged(Location location) {
-        double lat = location.getLatitude();
-        double lng = location.getLongitude();
-        texLL.setText("Lat. : "+lat+"\nLng. : "+lng);
-        if(selected!=null){
+        getLt = location.getLatitude();
+        getLn = location.getLongitude();
+        texLL.setText("Lat. : " + getLt + "\nLng. : " + getLn);
+        if (selected != null) {
             selected.remove();
         }
-        try{
-            addresses=geocode.getFromLocation(lat,lng,1);
+        try {
+            addresses = geocode.getFromLocation(getLt, getLn, 1);
             String address = addresses.get(0).getAddressLine(0);
-            txL.setText(""+address);
-            selected = mMap2.addMarker(new MarkerOptions().position(new LatLng(lat,lng)).title("Lokasi Terkini"));
-        }catch (IOException e) {
+            txL.setText("" + address);
+            selected = mMap2.addMarker(new MarkerOptions().position(new LatLng(getLt, getLn)).title("Lokasi Terkini"));
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -297,20 +323,16 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
     public void onProviderDisabled(String provider) {
 
     }
+
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
-    {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == MY_CAMERA_PERMISSION_CODE)
-        {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED)
-            {
+        if (requestCode == MY_CAMERA_PERMISSION_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(getContext(), "camera permission granted", Toast.LENGTH_LONG).show();
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
-            }
-            else
-            {
+            } else {
                 Toast.makeText(getContext(), "camera permission denied", Toast.LENGTH_LONG).show();
             }
         }
@@ -319,12 +341,107 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK)
-        {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            photo = (Bitmap) data.getExtras().get("data");
             priv.setImageBitmap(photo);
         }
+
+    }
+
+    public void ImageUpload(){
+        ByteArrayOutputStream byteArrayOutputStreamObject ;
+        byteArrayOutputStreamObject = new ByteArrayOutputStream();
+
+        photo.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStreamObject);
+        byte[] byteArrayVar = byteArrayOutputStreamObject.toByteArray();
+        final String ConvertImage = Base64.encodeToString(byteArrayVar, Base64.DEFAULT);
+        class AsyncTaskUploadClass extends AsyncTask<Void,Void,String> {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+//                progress = ProgressDialog.show(getContext(),"Image is Uploading","Please Wait",false,false);
+            }
+
+            @Override
+            protected void onPostExecute(String string1) {
+                super.onPostExecute(string1);
+//                progress.dismiss();
+                Log.e("debug", "onFailure: ERROR > " + string1);
+                Toast.makeText(getContext(),string1,Toast.LENGTH_LONG).show();
+                priv.setImageResource(android.R.color.transparent);
+            }
+
+            @Override
+            protected String doInBackground(Void... params) {
+                ImageProcessClass imageProcessClass = new ImageProcessClass();
+                HashMap<String,String> HashMapParams = new HashMap<String,String>();
+                HashMapParams.put(ImageName, "Sebelum");
+                HashMapParams.put(ImagePath, ConvertImage);
+                String FinalData = imageProcessClass.ImageHttpRequest(ImageUpload, HashMapParams);
+                return FinalData;
+            }
+        }
+        AsyncTaskUploadClass AsyncTaskUploadClassOBJ = new AsyncTaskUploadClass();
+        AsyncTaskUploadClassOBJ.execute();
+    }
+    public class ImageProcessClass{
+
+        public String ImageHttpRequest(String requestURL,HashMap<String, String> PData) {
+            StringBuilder stringBuilder = new StringBuilder();
+            try {
+                URL url;
+                HttpURLConnection httpURLConnectionObject ;
+                OutputStream OutPutStream;
+                BufferedWriter bufferedWriterObject ;
+                BufferedReader bufferedReaderObject ;
+                int RC ;
+                url = new URL(requestURL);
+                httpURLConnectionObject = (HttpURLConnection) url.openConnection();
+                httpURLConnectionObject.setReadTimeout(19000);
+                httpURLConnectionObject.setConnectTimeout(19000);
+                httpURLConnectionObject.setRequestMethod("POST");
+                httpURLConnectionObject.setDoInput(true);
+                httpURLConnectionObject.setDoOutput(true);
+                OutPutStream = httpURLConnectionObject.getOutputStream();
+                bufferedWriterObject = new BufferedWriter(
+                        new OutputStreamWriter(OutPutStream, "UTF-8"));
+                bufferedWriterObject.write(bufferedWriterDataFN(PData));
+                bufferedWriterObject.flush();
+                bufferedWriterObject.close();
+                OutPutStream.close();
+                RC = httpURLConnectionObject.getResponseCode();
+                if (RC == HttpsURLConnection.HTTP_OK) {
+                    bufferedReaderObject = new BufferedReader(new InputStreamReader(httpURLConnectionObject.getInputStream()));
+                    stringBuilder = new StringBuilder();
+                    String RC2;
+                    while ((RC2 = bufferedReaderObject.readLine()) != null){
+                        stringBuilder.append(RC2);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return stringBuilder.toString();
+        }
+
+        private String bufferedWriterDataFN(HashMap<String, String> HashMapParams) throws UnsupportedEncodingException {
+            StringBuilder stringBuilderObject;
+            stringBuilderObject = new StringBuilder();
+            for (Map.Entry<String, String> KEY : HashMapParams.entrySet()) {
+                if (check)
+                    check = false;
+                else
+                    stringBuilderObject.append("&");
+                stringBuilderObject.append(URLEncoder.encode(KEY.getKey(), "UTF-8"));
+                stringBuilderObject.append("=");
+                stringBuilderObject.append(URLEncoder.encode(KEY.getValue(), "UTF-8"));
+            }
+            return stringBuilderObject.toString();
+        }
+
+    }
+
+
 }
 }
