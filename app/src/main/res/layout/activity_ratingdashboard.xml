@@ -70,7 +70,6 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/btnkhimar"
-
                 android:layout_width="0px"
                 android:layout_height="157dp"
                 android:layout_rowWeight="1"

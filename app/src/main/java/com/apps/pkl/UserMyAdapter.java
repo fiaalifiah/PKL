@@ -23,7 +23,7 @@ public class UserMyAdapter  extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new AddTagFragment();
+                return new UserMapsFragment();
             case 1:
                 return new SemuaFragment();
 

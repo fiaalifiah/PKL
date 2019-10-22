@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.location.Address;
@@ -16,6 +17,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -43,6 +45,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -63,6 +66,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -96,6 +100,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
     BaseApiAdd mApiAdd;
     boolean check = true;
     Spinner kabel, core;
+    Uri filePath;
 
     String ImageName = "image_name" ;
     String ImagePath = "image_path" ;
@@ -115,6 +120,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         View root = inflater.inflate(R.layout.fragment_add_tag, container, false);
         requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 101);
+
 
         mFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapuser);
         mFragment.getMapAsync(this);
@@ -143,6 +149,9 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                         != PackageManager.PERMISSION_GRANTED && checkSelfPermission(getContext()
                         , Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     return;
+                }
+                if (checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                    requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 21);
                 }
                 Location loc = localmanager.getLastKnownLocation(localmanager.NETWORK_PROVIDER);
                 onLocationChanged(loc);
@@ -192,6 +201,22 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+//    public String getPath(Uri uri) {
+//        Cursor cursor = getActivity().getContentResolver().query(uri, null, null, null, null);
+//        cursor.moveToFirst();
+//        String document_id = cursor.getString(0);
+//        document_id = document_id.substring(document_id.lastIndexOf(":") + 1);
+//        cursor.close();
+//
+//        cursor = getActivity().getContentResolver().query(
+//                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+//                null, MediaStore.Images.Media._ID + " = ? ", new String[]{document_id}, null);
+//        cursor.moveToFirst();
+//        String path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+//        cursor.close();
+//
+//        return path;
+//    }
 
     public void addTag() {
         mApiAdd = UtilsApi.getAPIAdd();
@@ -204,6 +229,8 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         progress.show();
 
         //mengambil data
+
+//        final String path = getPath(filePath);
         String kabe = kabel.getSelectedItem().toString();
         String cor = core.getSelectedItem().toString();
         String des = desInfo.getText().toString();
@@ -217,6 +244,18 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                         JSONObject jsonRESULTS = new JSONObject(response.body().string());
                         if (jsonRESULTS.getString("error").equals("false")) {
                             Toast.makeText(getContext(), "Terkirim", Toast.LENGTH_SHORT).show();
+//                            try {
+//                                String uploadId = UUID.randomUUID().toString();
+//
+//                                //Creating a multi part request
+//                                new MultipartUploadRequest(getContext(), uploadId, "https://telkom-pkl.000webhostapp.com/api/addtag.php")
+//                                        .addFileToUpload(path, "image") //Adding file
+//                                        .setNotificationConfig(new UploadNotificationConfig())
+//                                        .setMaxRetries(2)
+//                                        .startUpload();
+//                            } catch (Exception exc) {
+//                                Toast.makeText( getContext(), exc.getMessage(), Toast.LENGTH_SHORT).show();
+//                            }
                             startActivity(new Intent(getActivity(), ActivityTime.class));
                         } else {
                             Toast.makeText(getContext(), "Gagal Kirim", Toast.LENGTH_SHORT).show();
@@ -334,9 +373,13 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        filePath = data.getData();
         if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
             photo = (Bitmap) data.getExtras().get("data");
             priv.setImageBitmap(photo);
+        }
+        if (resultCode == Activity.RESULT_CANCELED) {
+            return;
         }
     }
 
