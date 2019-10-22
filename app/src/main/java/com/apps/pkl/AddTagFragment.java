@@ -155,7 +155,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                 .setCancelable(false)
                 .setPositiveButton("Iya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
-                        addTag();
+                        startActivity(new Intent(getActivity(), ActivityTime.class));
                     }
                 })
                 .setNegativeButton("Tidak",new DialogInterface.OnClickListener() {
@@ -197,7 +197,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                         JSONObject jsonRESULTS = new JSONObject(response.body().string());
                         if (jsonRESULTS.getString("error").equals("false")) {
                             Toast.makeText(getContext(), "Terkirim", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getActivity(), ActivityTime.class));
+
                         } else {
                             Toast.makeText(getContext(), "Gagal Kirim", Toast.LENGTH_SHORT).show();
                         }
@@ -316,6 +316,8 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         }
     }
 
+
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
@@ -324,5 +326,5 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             priv.setImageBitmap(photo);
         }
-    }
+}
 }
