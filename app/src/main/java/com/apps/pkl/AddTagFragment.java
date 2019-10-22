@@ -188,9 +188,15 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         alertDialogBuilder
                 .setMessage("Data tidak bisa diubah lagi, Yakin melanjutkan?")
                 .setCancelable(false)
+
+                .setPositiveButton("Iya",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        startActivity(new Intent(getActivity(), ActivityTime.class));
+
                 .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         addTag();
+
                     }
                 })
                 .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
@@ -257,6 +263,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 //                                Toast.makeText( getContext(), exc.getMessage(), Toast.LENGTH_SHORT).show();
 //                            }
                             startActivity(new Intent(getActivity(), ActivityTime.class));
+
                         } else {
                             Toast.makeText(getContext(), "Gagal Kirim", Toast.LENGTH_SHORT).show();
                         }
@@ -371,6 +378,8 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         }
     }
 
+
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         filePath = data.getData();
@@ -476,4 +485,6 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
 
     }
 
+
+}
 }
