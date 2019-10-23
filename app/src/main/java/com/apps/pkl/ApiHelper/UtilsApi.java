@@ -9,5 +9,11 @@ public class UtilsApi {
     public static BaseApiAdd getAPIAdd(){
         return RetrofitClient.getClientAdd(BASE_URL_API).create(BaseApiAdd.class);
     }
+    public static BaseApiService getAPIPrimer(){
+        return RetrofitClient.getClientPrimer(BASE_URL_API).create(BaseApiService.class);
+    }
+    public static BaseApiService getAPICek(){
+        return RetrofitClient.getClientCek(BASE_URL_API).create(BaseApiService.class);
+    }
 
 }
