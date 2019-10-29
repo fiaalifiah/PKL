@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="bottom"
     sothree:umanoPanelHeight="155dp"
-    sothree:umanoShadowHeight="40dp">
+     sothree:umanoShadowHeight="40dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

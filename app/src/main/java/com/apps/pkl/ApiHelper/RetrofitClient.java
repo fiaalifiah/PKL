@@ -9,7 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     private static Retrofit retrofit = null;
     private static Retrofit retrofitAdd = null;
-    private static Retrofit retrofitImg = null;
+    private static Retrofit retrofitgetPrimer = null;
+    private static Retrofit retrofitgetCek = null;
 
     public static Retrofit getClient(String baseUrl){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -38,6 +39,33 @@ public class RetrofitClient {
                     .build();
         }
         return retrofitAdd;
+    }
+    public static Retrofit getClientPrimer(String baseUrlPrimer){
+        HttpLoggingInterceptor interceptorPrimer = new HttpLoggingInterceptor();
+        interceptorPrimer.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient clientprimer = new OkHttpClient.Builder().addInterceptor(interceptorPrimer).build();
+
+        if (retrofitgetPrimer == null){
+            retrofitgetPrimer = new Retrofit.Builder()
+                    .baseUrl(baseUrlPrimer)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(clientprimer)
+                    .build();
+        }
+        return retrofitgetPrimer;
+    }
+    public static Retrofit getClientCek(String baseUrlCek){
+        HttpLoggingInterceptor interceptorCek = new HttpLoggingInterceptor();
+        interceptorCek.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient clientCek = new OkHttpClient.Builder().addInterceptor(interceptorCek).build();
+        if (retrofitgetCek == null){
+            retrofitgetCek = new Retrofit.Builder()
+                    .baseUrl(baseUrlCek)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(clientCek)
+                    .build();
+        }
+        return retrofitgetCek;
     }
 
 }

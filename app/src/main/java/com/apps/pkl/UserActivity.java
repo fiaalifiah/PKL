@@ -47,7 +47,7 @@ public class UserActivity extends AppCompatActivity {
         }
         FM2= getSupportFragmentManager();
         FT2= FM2.beginTransaction();
-        FT2.replace(R.id.containerView2, new          UserHomeFragment()).commit();
+        FT2.replace(R.id.containerView2, new UserHomeFragment()).commit();
 
         navigationView2.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
