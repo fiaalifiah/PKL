@@ -39,6 +39,8 @@
             android:layout_marginTop="5dp" />
 
         <TableRow
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/row1"
             android:background="#99E6EB"
             android:padding="5dp">
@@ -89,8 +91,8 @@
 
         <TableRow
             android:id="@+id/d2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@color/colorPrimary"
             android:padding="5dp">
 
