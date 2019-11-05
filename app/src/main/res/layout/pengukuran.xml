@@ -2,19 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rtolay">
+    android:id="@+id/pengukuranlay">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/colorPrimary">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/warning"/>
         <TextView
-            android:id="@+id/txtLok12"
+            android:id="@+id/txtLok13"
             android:layout_marginTop="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,11 +18,22 @@
             android:textAlignment="center"
             android:text="Telkom"
             android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/edittxjarak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffff"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:hint="Isi Jarak"/>
         <Button
-            android:id="@+id/btnRespond"
+            android:id="@+id/btnUkur"
             android:layout_width="200dp"
             android:layout_height="35dp"
-            android:text="Respond"
+            android:text="Submit"
             android:textSize="10sp"
             android:layout_gravity="center"/>
     </LinearLayout>
