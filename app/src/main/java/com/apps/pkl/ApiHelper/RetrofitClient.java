@@ -11,6 +11,8 @@ public class RetrofitClient {
     private static Retrofit retrofitAdd = null;
     private static Retrofit retrofitgetPrimer = null;
     private static Retrofit retrofitgetCek = null;
+    private static Retrofit retrofitgetTerkini = null;
+
 
     public static Retrofit getClient(String baseUrl){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -66,6 +68,19 @@ public class RetrofitClient {
                     .build();
         }
         return retrofitgetCek;
+    }
+    public static Retrofit getClientTerkini(String baseUrlTerkini){
+        HttpLoggingInterceptor interceptorTerkini = new HttpLoggingInterceptor();
+        interceptorTerkini.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient clientTerkini = new OkHttpClient.Builder().addInterceptor(interceptorTerkini).build();
+        if (retrofitgetTerkini == null){
+            retrofitgetTerkini = new Retrofit.Builder()
+                    .baseUrl(baseUrlTerkini)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(clientTerkini)
+                    .build();
+        }
+        return retrofitgetTerkini;
     }
 
 }

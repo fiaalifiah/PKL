@@ -15,5 +15,7 @@ public class UtilsApi {
     public static BaseApiService getAPICek(){
         return RetrofitClient.getClientCek(BASE_URL_API).create(BaseApiService.class);
     }
-
+    public static BaseApiService getAPITerkini(){
+        return RetrofitClient.getClientTerkini(BASE_URL_API).create(BaseApiService.class);
+    }
 }

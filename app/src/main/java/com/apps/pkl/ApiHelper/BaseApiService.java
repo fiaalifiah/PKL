@@ -18,4 +18,8 @@ public interface BaseApiService {
 
     @GET("getCek.php")
     Call<ResponseBody> cek();
+
+    @GET("getTerkini.php")
+    Call<ResponseBody> getTerkini();
+
 }

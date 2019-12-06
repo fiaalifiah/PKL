@@ -17,6 +17,8 @@ public interface BaseApiAdd {
                               @Field("lng") Double lng,
                               @Field("kabel") String kabel,
                               @Field("core") String core,
-                              @Field("des") String des);
+                              @Field("des") String des,
+                              @Field("telkomA") Double telkoma,
+                              @Field("telkomB") Double telkomb);
 
 }

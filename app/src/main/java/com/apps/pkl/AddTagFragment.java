@@ -185,15 +185,14 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
     public void alertConfirm() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setTitle("Peringatan!");
-        alertDialogBuilder
-                .setMessage("Data tidak bisa diubah lagi, Yakin melanjutkan?")
+        alertDialogBuilder.setMessage("Data tidak bisa diubah lagi, Yakin melanjutkan?")
                 .setCancelable(false)
-
                 .setPositiveButton("Iya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
+                        addTag();
                         startActivity(new Intent(getActivity(), ActivityTime.class));
-                    }})
-
+                    }
+                })
                 .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
@@ -236,7 +235,7 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         String cor = core.getSelectedItem().toString();
         String des = desInfo.getText().toString();
 
-        mApiAdd.addTag( getLt, getLn, kabe, cor, des).enqueue(new Callback<ResponseBody>() {
+        mApiAdd.addTag( getLt, getLn, kabe, cor, des, 2.6, 2.0).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
