@@ -192,13 +192,8 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
                 .setPositiveButton("Iya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
                         startActivity(new Intent(getActivity(), ActivityTime.class));
+                    }})
 
-                .setPositiveButton("Iya", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        addTag();
-
-                    }
-                })
                 .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
@@ -484,7 +479,4 @@ public class AddTagFragment extends Fragment implements OnMapReadyCallback, Loca
         }
 
     }
-
-
-}
 }

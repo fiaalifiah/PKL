@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Data History"SA
+        android:text="Data History"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#0C0C0C"
